@@ -1,0 +1,27 @@
+﻿@model Student
+
+<div class="container mt-4">
+    <h2>Öğrenci Formu</h2>
+
+    @using (Html.BeginForm())
+    {
+        <div class="mb-3">
+            @Html.LabelFor(x => x.Name)
+            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        </div>
+
+        <div class="mb-3">
+            @Html.LabelFor(x => x.SurName)
+            @Html.TextBoxFor(x => x.SurName, new { @class = "form-control" })
+        </div>
+
+        <div class="mb-3">
+            @Html.LabelFor(x => x.Email)
+            @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+        </div>
+
+        <button class="btn btn-success">
+            Kaydet
+        </button>
+    }
+</div>

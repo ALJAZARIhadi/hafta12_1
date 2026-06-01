@@ -1,0 +1,35 @@
+﻿@model List<Lesson>
+
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ders Kodu</th>
+            <th>Ders Adı</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(var lss in Model)
+    {
+      <tr>
+       
+          
+        <td>@lss.Id</td>  
+        <td>@lss.Code</td>
+        <td>@lss.Name</td>
+        <td>
+        
+       
+        <a href="Lesson/Delete/@lss.Id" class="btn btn-warning">Sil</a>
+        <a href="Lesson/Update/@lss.Id" class="btn btn-danger">Güncelle</a>
+                    <a href="Lesson/List/@lss.Id" class="btn btn-secondary">Dersi Alan Öğrenciler</a>
+            </td>
+        </tr>   
+
+    }
+    </tbody>
+    </tbody>
+</table>
+
+    <a class="btn btn-primary" href="Lesson/Add">Yeni Ders Ekle</a>

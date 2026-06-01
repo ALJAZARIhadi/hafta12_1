@@ -1,0 +1,14 @@
+﻿@model Student
+
+
+@foreach (var lss in Model.DersBilgileri)
+{
+    @lss.LessonId
+        @lss.Lesson.Name
+   
+    
+    <br />
+
+}
+
+<a class="btn btn-primary" href="Lesson/Add">Yeni Ders Ekle</a>

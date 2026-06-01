@@ -1,0 +1,9 @@
+﻿@model Lesson
+
+@Model.Name
+<br />
+@foreach(var d in Model.DersKa)
+{
+    @d.Student.Name
+    <br/>
+}

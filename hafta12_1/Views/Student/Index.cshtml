@@ -1,0 +1,17 @@
+﻿@model List<Student>
+
+
+    @foreach(var ogr in Model)
+    {
+        @ogr.Id 
+        @ogr.Name 
+        @ogr.SurName 
+        @ogr.Email
+        <a href="Student/Delete/@ogr.Id" class="btn btn-warning">Sil</a>
+        <a href="Student/Update/@ogr.Id" class="btn btn-danger">Güncelle</a>
+        <a href="Student/List/@ogr.Id" class="btn btn-secondary">Dersleri Listele</a>
+        <br/>
+
+    }
+
+    <a class="btn btn-primary" href="Student/Add">Yeni Öğrenci Ekle</a>

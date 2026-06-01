@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Register
+<form action="Register/Update" method="post">
+
+    <select asp-for="StudentId" asp-items="ViewBag.Ogrenciler">
+        <option id="@ViewBag.OgrId">@ViewBag.OgrId</option>
+    </select>
+
+    <select asp-for="LessonId" asp-items="ViewBag.Dersler">
+        <option id="@ViewBag.DersId">@ViewBag.DersId</option>
+    </select>
+
+    <button class="btn btn-primary">Güncelle</button>
+
+
+
+</form>
